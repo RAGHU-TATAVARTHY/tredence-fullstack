@@ -1,16 +1,100 @@
-# React + Vite
+# HR Workflow Builder – React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a mini HR Workflow Builder application developed using **React and React Flow**.  
+The goal of this project is to visually design, configure, and simulate internal HR workflows like employee onboarding, approvals, and automated actions.
 
-Currently, two official plugins are available:
+This project was built as part of a technical assignment to demonstrate skills in:
+- Frontend architecture
+- Visual workflow systems
+- Dynamic form handling
+- Mock API simulation
+- Business logic implementation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+##  Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Visual drag-and-drop workflow builder
+- Five custom workflow nodes:
+  - Start Node  
+  - Task Node  
+  - Approval Node  
+  - Automated Node  
+  - End Node  
+- Sidebar to add nodes dynamically
+- Connect nodes using arrows
+- Right-side panel to edit node details
+- Start node metadata support (key/value pairs)
+- Approval auto-approval based on metadata
+- Automated node actions (Email, Document generation)
+- Workflow validation (Start & End required)
+- Simulation engine with step-by-step execution log
+- Delete nodes and edges using keyboard
+- Fully modular and scalable React structure
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Node Configuration Details
+
+###  Start Node
+- Title
+- Metadata (key-value pairs)
+
+###  Task Node
+- Title
+- Description
+- Assignee
+- Due Date
+- Custom Fields
+
+###  Approval Node
+- Title
+- Approver Role
+- Auto-Approval Threshold (based on metadata)
+
+###  Automated Node
+- Action Selection (Send Email / Generate Document)
+- Dynamic Parameters (To, Subject, Template, etc.)
+
+###  End Node
+- End Message
+- Summary Flag
+
+---
+
+##  Workflow Simulation
+
+The simulation engine performs the following:
+- Validates whether Start and End nodes exist
+- Reads metadata from Start Node
+- Applies approval logic using metadata and threshold
+- Executes automated actions
+- Displays a clean step-by-step execution log
+
+Example simulation output:
+- Metadata is loaded
+- Approval is auto-approved or marked for manual approval
+- Automated email or document is triggered
+- Workflow ends successfully
+
+---
+
+##  Tech Stack Used
+
+- React (Vite)
+- React Flow
+- JavaScript
+- CSS
+- Mock API Simulation
+
+---
+
+##  How to Run the Project
+
+1. Install dependencies:
+npm install  
+
+2. Start the development server:
+npm run dev
+
+3. Open in browser
